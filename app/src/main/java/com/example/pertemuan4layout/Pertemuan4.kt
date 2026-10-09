@@ -21,6 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -57,6 +58,13 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
             alamatRes = R.string.alamat_1,
             BackgroundColor = colorResource(id = R.color.card_gray)
 
+        )
+        // Card 2 : Purple
+        ProfileCard(
+            nameRes = R.string.nama_2,
+            telpRes = R.string.telp_2,
+            alamatRes = R.string.alamat_2,
+            BackgroundColor = colorResource(id = R.color.card_purple)
         )
     }
 }
