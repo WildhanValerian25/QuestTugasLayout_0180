@@ -26,7 +26,7 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
             .verticalScroll(rememberScrollState())
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
-    ){
+    ) {
         Spacer(modifier = Modifier.height(20.dp))
         Text(
             text = stringResource(id = R.string.prodi),
@@ -38,4 +38,10 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
             fontSize = 14.sp,
             color = Color.Gray
         )
-})
+    }
+}
+
+@Composable
+fun ProfileCard(nameRes: Int, telpRes: Int, alamatRes: Int, BackgroundColor: Color) {
+
+}
