@@ -109,6 +109,12 @@ fun ProfileCard(nameRes: Int, telpRes: Int, alamatRes: Int, BackgroundColor: Col
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
+            Image(
+                painter = painterResource(id = R.drawable.logoultraman),
+                contentDescription = null,
+                modifier = Modifier.size(50.dp).clip(CircleShape)
+            )
+
 
             Column(modifier = Modifier.weight(1f).padding(horizontal = 12.dp)) {
                 Text(
