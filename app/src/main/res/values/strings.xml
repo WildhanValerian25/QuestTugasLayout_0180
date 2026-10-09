@@ -2,5 +2,8 @@
     <string name="app_name">Pertemuan 4 layout</string>
     <string name="prodi">Teknologi Informasi</string>
     <string name="univ">Universitas Muhammadiyah Yogyakarta</string>
+    <string name="nama_1">Wildhan Valerian</string>
+    <string name="telp_1">0899771293</string>
+    <string name="alamat_1">Sewon, Bantul </string>
 
 </resources>
