@@ -80,6 +80,14 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
             telpRes = R.string.telp_4,
             alamatRes = R.string.alamat_4,
             BackgroundColor = colorResource(id = R.color.card_green)
+        )
+
+        Spacer(modifier = Modifier.height(20.dp))
+        Text(
+            text = stringResource(id = R.string.copy),
+            fontSize = 12.sp,
+            color = Color.Gray
+        )
     }
 }
 
