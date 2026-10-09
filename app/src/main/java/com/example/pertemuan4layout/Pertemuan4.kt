@@ -11,8 +11,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -51,13 +53,15 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
 
 @Composable
 fun ProfileCard(nameRes: Int, telpRes: Int, alamatRes: Int, BackgroundColor: Color) {
-    Card(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)) {
-        Row(modifier = Modifier.padding(12.dp)) {
-            Image(
-                painter = painterResource(id = R.drawable.logoultraman),
-                contentDescription = null,
-                modifier = Modifier.size(50.dp).clip(CircleShape)
-            )
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 8.dp), // <--- Tutup kurung modifier di sini (tambah koma)
+        shape = RoundedCornerShape(12.dp),
+        colors = CardDefaults.cardColors(containerColor = BackgroundColor),
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+    ) {
+
             Column(modifier = Modifier.weight(1f).padding(horizontal = 12.dp)) {
                 Text(text = stringResource(id = nameRes), fontSize = 16.sp, fontWeight = FontWeight.Bold, color = Color.White)
                 Text(text = stringResource(id = telpRes), fontSize = 12.sp, color = Color.Yellow)
@@ -67,6 +71,5 @@ fun ProfileCard(nameRes: Int, telpRes: Int, alamatRes: Int, BackgroundColor: Col
             Image(painter = painterResource(id = R.drawable.logoultraman), contentDescription = null, modifier = Modifier.size(50.dp).clip(CircleShape))
         }
     }
-        }
 
 
