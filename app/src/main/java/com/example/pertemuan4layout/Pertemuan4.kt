@@ -49,6 +49,15 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
             color = Color.Gray
         )
         Spacer(modifier = Modifier.height(20.dp))
+
+        // Card 1 : DarkGray
+        ProfileCard(
+            nameRes = R.string.nama_1,
+            telpRes = R.string.telp_1,
+            alamatRes = R.string.alamat_1,
+            BackgroundColor = colorResource(id = R.color.card_gray)
+
+        )
     }
 }
 
