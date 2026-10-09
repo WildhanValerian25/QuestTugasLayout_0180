@@ -1,6 +1,7 @@
 package com.example.pertemuan4layout
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -96,20 +97,37 @@ fun ProfileCard(nameRes: Int, telpRes: Int, alamatRes: Int, BackgroundColor: Col
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(vertical = 8.dp), // <--- Tutup kurung modifier di sini (tambah koma)
+            .padding(vertical = 8.dp),
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(containerColor = BackgroundColor),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
 
             Column(modifier = Modifier.weight(1f).padding(horizontal = 12.dp)) {
-                Text(text = stringResource(id = nameRes), fontSize = 16.sp, fontWeight = FontWeight.Bold, color = Color.White)
+                Text(
+                    text = stringResource(id = nameRes),
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.White
+                )
                 Text(text = stringResource(id = telpRes), fontSize = 12.sp, color = Color.Yellow)
                 Text(text = stringResource(id = alamatRes), fontSize = 12.sp, color = Color.White)
             }
 
-            Image(painter = painterResource(id = R.drawable.logoultraman), contentDescription = null, modifier = Modifier.size(50.dp).clip(CircleShape))
+            Image(
+                painter = painterResource(id = R.drawable.logoultraman),
+                contentDescription = null,
+                modifier = Modifier.size(50.dp).clip(CircleShape)
+            )
         }
     }
+}
 
 
