@@ -63,6 +63,7 @@ fun ProfileCard(nameRes: Int, telpRes: Int, alamatRes: Int, BackgroundColor: Col
                 Text(text = stringResource(id = telpRes), fontSize = 12.sp, color = Color.Yellow)
                 Text(text = stringResource(id = alamatRes), fontSize = 12.sp, color = Color.White)
             }
+
             Image(painter = painterResource(id = R.drawable.logoultraman), contentDescription = null, modifier = Modifier.size(50.dp).clip(CircleShape))
         }
     }
