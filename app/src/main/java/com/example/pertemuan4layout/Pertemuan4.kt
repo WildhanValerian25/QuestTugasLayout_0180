@@ -74,6 +74,12 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
             BackgroundColor = colorResource(id = R.color.card_blue)
 
         )
+        // Card 4 : Green
+        ProfileCard(
+            nameRes = R.string.nama_4,
+            telpRes = R.string.telp_4,
+            alamatRes = R.string.alamat_4,
+            BackgroundColor = colorResource(id = R.color.card_green)
     }
 }
 
